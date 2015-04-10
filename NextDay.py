@@ -21,7 +21,7 @@ def nextDay(year, month, day):
 #validate the input date
 def validateDate(year, month, day):
     result = True
-    if year <= 1900 or year >= 2099:
+    if year < 1900 or year > 2100:
         result = False
     elif month < 1 or month > 12:
         result = False
@@ -59,6 +59,7 @@ def main():
     print("The day == Lunar year:", get_lunar_date(year, month, day))
     print("Program End!")
 
-main()
+if __name__ == "__main__":
+    main()
 
 
